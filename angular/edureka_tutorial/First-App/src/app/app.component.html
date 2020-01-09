@@ -1,3 +1,21 @@
 <h1>App Component</h1>
 
 <app-server></app-server>
+
+<h1 [ngStyle]="{color: getColor()}">This is an example of ngif</h1>
+
+<h3 [ngClass]="{white: flag}">This is just an example of ngclass</h3>
+
+<p *ngIf="flag; else elseblock"> Flag is True </p>
+<ng-template #elseblock>
+    <p id="flase"> Flag is false </p>
+</ng-template>
+
+<button (click)="toggleFlag()"> Toggle Flag </button>
+
+<h1>Student Roster</h1>
+
+<input type="text" placeholder="name" [(ngModel)]="currentName" />
+<button (click)="add()">Submit Student Name</button>
+
+<li *ngFor="let name of studentRoster">{{name}}</li>
