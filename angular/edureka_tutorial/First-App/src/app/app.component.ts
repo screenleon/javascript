@@ -11,6 +11,9 @@ export class AppComponent {
 
   studentRoster = ['Arya', 'Lien', 'Rick'];
   currentName = '';
+  paragraphDisableState:boolean = false;
+  displayState:string = 'block';
+  toggleParagraphCount:number = 0;
 
   toggleFlag(){
     this.flag = !this.flag;
@@ -27,5 +30,20 @@ export class AppComponent {
   add() {
     this.studentRoster.push(this.currentName);
     this.currentName = "";
+    return;
+  }
+
+  toggleParagraphDisableState(){
+    this.paragraphDisableState = !this.paragraphDisableState;
+    this.displayState = this.getParagraphDisableState();
+    this.toggleParagraphCount++;
+  }
+
+  getParagraphDisableState(){
+    if(this.paragraphDisableState){
+      return 'block';
+    }else {
+      return 'none';
+    }
   }
 }

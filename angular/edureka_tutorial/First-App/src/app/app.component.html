@@ -19,3 +19,11 @@
 <button (click)="add()">Submit Student Name</button>
 
 <li *ngFor="let name of studentRoster">{{name}}</li>
+
+<h1>new Challenger</h1>
+<p [ngStyle]="{display: displayState}" *ngIf="toggleParagraphCount !== 5; else other_content">abalabilabolibe</p>
+<ng-template #other_content>
+    <p [ngStyle]="{color: '#13d17f'}">abalabilabolibe</p>
+</ng-template>
+<!-- <p [ngStyle]="{display: displayState}">abalabilabolibe </p> -->
+<button (click)="toggleParagraphDisableState()"> Toggle paragraph {{displayState}} </button>
