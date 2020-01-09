@@ -1,0 +1,13 @@
+<h1>Welcome to {{ title }}</h1>
+
+<app-red></app-red>
+<app-green></app-green>
+<app-yellow></app-yellow>
+<h2>Display Server Information</h2>
+<p> Server name {{ ServerName }} with pid {{ ServerPid }} is {{ ServerStatus }} </p>
+
+<button [disabled]="buttonState" (click)="toggleServerStatus()"> Toggle Server Status </button>
+<br/><br/>
+<h3>Input Server Information</h3>
+<input type="text" placeholder="ServerName" [(ngModel)]="ServerName" />
+<br/>
