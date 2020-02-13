@@ -22,8 +22,8 @@ nodemailer.createTestAccount((err, account) => {
             port: 2525,
             secure: false,
             // auth: {
-            //     user: "jaycee.cole93@ethereal.email",
-            //     pass: "knzFXgJsUvphsPsCnN"
+            //     user: "",
+            //     pass: ""
             // },
             logger: true,
             debug: false // include SMTP traffic in the logs
