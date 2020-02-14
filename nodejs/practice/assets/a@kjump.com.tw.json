@@ -1,0 +1,43 @@
+{
+    "rv":{
+        "a@kjump.com.tw":{
+            "firstName":"Tester",
+            "lastName":"Chen",
+            "email":"a@kjump.com.tw",
+            "password":"HLg9RQUl",
+            "link":"http://127.0.0.1:3000/?username=a%40kjump.com.tw"
+        },"webdev@oucare.com":{
+            "firstName":"Tester",
+            "lastName":"Chen",
+            "email":"a@kjump.com.tw",
+            "password":"HLg9RQUl",
+            "link":"http://127.0.0.1:3000/?username=a%40kjump.com.tw"
+        }
+    },"v":{
+        "user":{
+            "_id":"5e4661931a5de91b423e2960",
+            "status":2,
+            "email":"a@kjump.com.tw",
+            "country":"TWN",
+            "group":"0000",
+            "cardSN":"0123456789",
+            "firstName":"Tester",
+            "lastName":"Chen",
+            "height":190,
+            "phonePrefix":"886",
+            "phone":"0912345678",
+            "birthday":"2020-02-10",
+            "gender":1,
+            "updatedAt":"2020-02-14T09:00:03.778Z",
+            "dccSns":[],
+            "clientIds":[],
+            "sudo":false,
+            "emailVerified":false,
+            "password":true,
+            "createdAt":"2020-02-14T09:00:03.000Z",
+            "cardId":"TWN00000123456789",
+            "fullName":"Chen Tester",
+            "id":"5e4661931a5de91b423e2960"
+        }
+    }
+}
