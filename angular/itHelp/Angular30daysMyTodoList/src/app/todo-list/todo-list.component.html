@@ -6,12 +6,12 @@
     </header>
 
     <!-- 清單區域開始 -->
-    <section class="main">
+    <section class="main" *ngIf="getList().length > 0">
         <ul class="todo-list">
-            <li>
+            <li *ngFor="let todo of getList()">
                 <div class="view">
                     <input class="toggle" type="checkbox">
-                    <label>顯示待辦事項</label>
+                    <label>{{ todo }}</label>
                     <button class="destroy"></button>
                 </div>
             </li>
