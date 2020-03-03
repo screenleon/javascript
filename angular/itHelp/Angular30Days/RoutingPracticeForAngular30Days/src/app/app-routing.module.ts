@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { FeatureModule } from './feature/feature.module'
 
 // /home, /about
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'feature',
+    loadChildren: './feature/feature.module#FeatureModule'
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
@@ -40,7 +45,8 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     // enableTracing: true,
-    useHash: true
+    useHash: true,
+    preloadingStrategy: PreloadAllModules
   })],
   exports: [RouterModule]
 })
