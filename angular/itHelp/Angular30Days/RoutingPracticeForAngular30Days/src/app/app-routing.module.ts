@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import {FeatureModule} from './feature/feature.module'
+
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
-import { FeatureModule } from './feature/feature.module'
+import { LayoutGuard } from './layout/layout.guard';
 
 // /home, /about
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    canActivate: [LayoutGuard],
     children: [
       {
         path: 'home',
@@ -33,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'feature',
-    loadChildren: './feature/feature.module#FeatureModule'
+    loadChildren: () => FeatureModule
   },
   {
     path: '**',
