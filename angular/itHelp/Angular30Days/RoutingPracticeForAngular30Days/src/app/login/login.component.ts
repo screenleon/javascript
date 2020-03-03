@@ -7,7 +7,7 @@ import { Router } from '@angular/router'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  name: string = '';
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -25,7 +25,10 @@ export class LoginComponent implements OnInit {
         name: 'Leo'
       }
     });
+  }
 
+  getName(): string {
+    return this.name;
   }
 
 }
