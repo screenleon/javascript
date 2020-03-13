@@ -21,25 +21,10 @@
                     </ul>
                 </div>
 
-                <!-- {{ articles | json }} use json pipe translate object to json -->
                 <ng-container *ngIf="articles.length > 0; else noData">
-                    <div class="article-preview" *ngFor="let article of articles">
-                        <div class="article-meta">
-                            <a href="profile.html"><img [src]="article.avatar" /></a>
-                            <div class="info">
-                                <a href="" class="author">{{ article.author }}</a>
-                                <span class="date">{{ article.publishDate | date: 'MMMM d' }}</span>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm pull-xs-right" (click)="like(article)">
-                                <i class="ion-heart"></i> {{ article.likes }}
-                            </button>
-                        </div>
-                        <a href="" class="preview-link">
-                            <h1>{{ article.title }}</h1>
-                            <p>{{ article.content | slice: 0: 60 }}</p>
-                            <span>Read more...</span>
-                        </a>
-                    </div>
+                    <!-- <app-article *ngFor="let article of articles" [article]="article"
+                    (like)="like($event)"></app-article> -->
+                    <app-article *ngFor="let article of articles" [article]="article"></app-article>
                 </ng-container>
                 <ng-template #noData>No Data</ng-template>
             </div>
@@ -48,11 +33,7 @@
             <div class="col-md-3">
                 <div class="sidebar">
                     <p>Popular Tags</p>
-
-                    <ng-container class="tag-list" *ngFor="let tag of tags">
-                        <a [href]="tag.url" class="tag-pill tag-default">{{ tag.name }}</a>
-
-                    </ng-container>
+                    <app-tag class="tag-list" *ngFor="let tag of tags" [tag]="tag"></app-tag>
                 </div>
             </div>
 
