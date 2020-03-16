@@ -5,6 +5,9 @@ import { TagModel } from '../models/tag.model';
 
 import { Articles } from '../models/articles.model';
 import { Article } from '../models/article.model';
+import { ApiService } from '../service/api.service';
+import { pipe } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 const mockTags: TagModel[] = [
   {
@@ -47,26 +50,10 @@ const mockTags: TagModel[] = [
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public articles: Article[] = [];
+  public articles$ = this.apiService.loadData().pipe(map(result => result.articles))
   public tags = mockTags;
-  private baseUrl = "http://localhost:3300/api";
 
-  constructor(private http: HttpClient) {
-    this.loadData();
-  }
-
-  loadData() {
-    this.http.get<Articles>(`${this.baseUrl}/articles/`).subscribe({
-      next: res => {
-        console.log(res);
-        res.articles.forEach(article => {
-          article.createdAt = new Date(article.createdAt);
-          article.updatedAt = new Date(article.updatedAt);
-        });
-        this.articles = res.articles;
-      }
-    });
-  }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
   }

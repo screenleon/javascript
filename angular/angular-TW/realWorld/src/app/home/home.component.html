@@ -20,12 +20,12 @@
                         </li>
                     </ul>
                 </div>
-
-                <ng-container *ngIf="articles.length > 0; else noData">
+                <ng-container *ngIf="(articles$ | async) as articles; else noData">
                     <!-- <app-article *ngFor="let article of articles" [article]="article"
                     (like)="like($event)"></app-article> -->
                     <app-article *ngFor="let article of articles" [article]="article"></app-article>
                 </ng-container>
+
                 <ng-template #noData>No Data</ng-template>
             </div>
 
