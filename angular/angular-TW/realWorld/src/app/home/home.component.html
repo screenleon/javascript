@@ -20,7 +20,8 @@
                         </li>
                     </ul>
                 </div>
-                <ng-container *ngIf="(articles$ | async) as articles; else noData">
+
+                <ng-container *ngIf="(data$ | async) as articles; else noData">
                     <!-- <app-article *ngFor="let article of articles" [article]="article"
                     (like)="like($event)"></app-article> -->
                     <app-article *ngFor="let article of articles" [article]="article"></app-article>
@@ -36,7 +37,7 @@
                     <app-tag class="tag-list" *ngFor="let tag of tags" [tag]="tag"></app-tag>
                 </div>
             </div>
-
+            <app-paginator [totalCount]="totalCount$ | async" #paginator>test paginator</app-paginator>
         </div>
     </div>
 

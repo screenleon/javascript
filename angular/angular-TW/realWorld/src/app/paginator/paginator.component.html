@@ -1,0 +1,10 @@
+<ng-container *ngFor="let page of pages; let idx = index">
+    <button>{{ idx + 1 }}</button>
+</ng-container>
+
+<ul>
+    <li *ngFor="let page of pages; let idx = index" (click)="setPage(idx)">
+        <button>{{ idx + 1 }}</button>
+    </li>
+</ul>
+<ng-content></ng-content>
