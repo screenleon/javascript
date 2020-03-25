@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ProfileResolverService } from './profile/profile-resolver.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -17,8 +19,14 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'article/:id', component: ArticleDetailComponent },
-  { path: 'profile/:username', component: ProfileComponent },
-  { path: '**', redirectTo: ''}
+  {
+    path: 'profile/:username',
+    component: ProfileComponent,
+    resolve: {
+      profile: ProfileResolverService
+    }
+  },
+  { path: '**', redirectTo: '' }
 ]
 
 @NgModule({
