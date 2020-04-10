@@ -6,14 +6,17 @@
     <script type="text/javascript">
 
         // Load the Visualization API and the piechart package.
-        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.load('current', { 'packages': ['corechart', 'annotationchart'] });
 
         // Set a callback to run when the Google Visualization API is loaded.
         google.charts.setOnLoadCallback(drawChart);
         google.charts.setOnLoadCallback(drawRandomChart);
-        // Callback that creates and populates a data table, 
-        // instantiates the pie chart, passes in the data and
-        // draws it.
+        google.charts.setOnLoadCallback(drawAnnotationChart);
+        google.charts.setOnLoadCallback(drawAnnotationChartTest);
+        google.charts.setOnLoadCallback(drawWrapper);
+        google.charts.setOnLoadCallback(drawDrawChart);
+        google.charts.setOnLoadCallback(drawChartPNG);
+
         function drawChart() {
 
             // Create the data table.
@@ -41,9 +44,9 @@
             var options = {
                 'title': 'How Much Pizza I Ate Last Night',
                 'width': 400,
-                'is3D': true,
-                'height': 300
-
+                'height': 300,
+                tooltip: { trigger: 'focus' },
+                focusTarget: 'category',
             };
 
             // Instantiate and draw our chart, passing in some options.
@@ -67,12 +70,131 @@
 
             setInterval(() => {
                 data.addRow([new Date().toLocaleString(), Math.floor(Math.random() * 20 + 100)])
-            }, 1000*60);
+            }, 1000 * 60);
 
             setInterval(() => {
                 let chart = new google.visualization.LineChart(document.getElementById('interval_chart'));
                 chart.draw(data, options);
-            }, 1000*60);
+            }, 1000 * 60);
+        }
+
+        function drawAnnotationChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Kepler-22b mission');
+            data.addColumn('string', 'Kepler title');
+            data.addColumn('string', 'Kepler text');
+            data.addColumn('number', 'Gliese 163 mission');
+            data.addColumn('string', 'Gliese title');
+            data.addColumn('string', 'Gliese text');
+            data.addRows([
+                [new Date(2314, 2, 15), 12400, undefined, undefined,
+                    10645, undefined, undefined],
+                [new Date(2314, 2, 16), 24045, 'Lalibertines', 'First encounter',
+                    12374, undefined, undefined],
+                [new Date(2314, 2, 17), 35022, 'Lalibertines', 'They are very tall',
+                    15766, 'Gallantors', 'First Encounter'],
+                [new Date(2314, 2, 18), 12284, 'Lalibertines', 'Attack on our crew!',
+                    34334, 'Gallantors', 'Statement of shared principles'],
+                [new Date(2314, 2, 19), 8476, 'Lalibertines', 'Heavy casualties',
+                    66467, 'Gallantors', 'Mysteries revealed'],
+                [new Date(2314, 2, 20), 0, 'Lalibertines', 'All crew lost',
+                    79463, 'Gallantors', 'Omniscience achieved']
+            ]);
+
+            var chart = new google.visualization.AnnotationChart(document.getElementById('annotation_chart'));
+
+            var options = {
+                displayAnnotations: true
+            };
+
+            chart.draw(data, options);
+        }
+
+        function drawAnnotationChartTest() {
+            let rowData = [];
+            for (let i = 0; i < 100; i++) {
+                rowData.push([getRandomDate(), Math.ceil(Math.random() * 100000)])
+            }
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'amount');
+            data.addRows(rowData);
+
+            var chart = new google.visualization.AnnotationChart(document.getElementById('annotation_test_chart'));
+
+            var options = {
+                width: '100%',
+                tooltip: { trigger: 'focus' },
+                focusTarget: 'category',
+                ui: {
+                    minRangeSize: 500
+                },
+                displayAnnotations: true
+            };
+
+            chart.draw(data, options);
+        }
+
+        // google.charts.load('current');  // Don't need to specify chart libraries!
+        function drawWrapper() {
+            // currently propagates only the select, ready, and error events
+            var wrapper = new google.visualization.ChartWrapper({
+                chartType: 'ColumnChart',
+                dataTable: [['', 'Germany', 'USA', 'Brazil', 'Canada', 'France', 'RU'],
+                ['', 700, 300, 400, 500, 600, 800]],
+                options: { 'title': 'Countries' },
+                containerId: 'wrapper_chart'
+            });
+            wrapper.draw();
+        }
+
+        // google.charts.load('current');  // Don't need to specify chart libraries!
+        function drawDrawChart() {
+            // Does not return a handle to the wrapper, so you cannot handle any events.
+            google.visualization.drawChart({
+                "containerId": "drawchart_chart",
+                "dataSourceUrl": "https://spreadsheets.google.com/a/google.com/tq?key=pCQbetd-CptGXxxQIG7VFIQ&pub=1",
+                "query": "SELECT A,D WHERE D > 100 ORDER BY D",
+                "refreshInterval": 5,
+                "chartType": "Table",
+                "options": {
+                    "alternatingRowStyle": true,
+                    "showRowNumber": true
+                }
+            })
+        };
+
+        function drawChartPNG() {
+            var data = google.visualization.arrayToDataTable([
+                ['Element', 'Density', { role: 'style' }],
+                ['Copper', 8.94, '#b87333',],
+                ['Silver', 10.49, 'silver'],
+                ['Gold', 19.30, 'gold'],
+                ['Platinum', 21.45, 'color: #e5e4e2']
+            ]);
+
+            var options = {
+                title: "Density of Precious Metals, in g/cm^3",
+                bar: { groupWidth: '95%' },
+                legend: 'none',
+            };
+
+            var chart_div = document.getElementById('draw_chart_PNG');
+            var chart = new google.visualization.ColumnChart(chart_div);
+
+            // Wait for the chart to finish drawing before calling the getImageURI() method.
+            google.visualization.events.addListener(chart, 'ready', function () {
+                chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
+                console.log(chart_div.innerHTML);
+            });
+
+            chart.draw(data, options);
+
+        }
+
+        function getRandomDate() {
+            return new Date(Math.ceil(Math.random() * 86400000) + 1586400000000)
         }
     </script>
 </head>
@@ -80,6 +202,11 @@
 <body>
     <div id="chart_div" style="width:400; height:300"></div>
     <div id="interval_chart" style="width:100%; height:600"></div>
+    <div id="annotation_chart" style="width:100%; height:600"></div>
+    <div id="annotation_test_chart" style="width:100%; height:600"></div>
+    <div id="wrapper_chart" style="width:100%; height:600"></div>
+    <div id="drawchart_chart" style="width:100%; height:600"></div>
+    <div id="draw_chart_PNG" style="width:100%; height:600"></div>
 </body>
 
 </html>
