@@ -21,12 +21,12 @@
 
             // Create the data table.
             var data = new google.visualization.arrayToDataTable([
-                ['Topping', 'Slices'],
-                ['Mushrooms', 3],
-                ['Onions', 1],
-                ['Olives', 1],
-                ['Zucchini', 1],
-                ['Pepperoni', 2]
+                ['Topping', 'Slices', 'Amount'],
+                ['Mushrooms', 3, 100],
+                ['Onions', 1, 50],
+                ['Olives', 1, 70],
+                ['Zucchini', 1, 19],
+                ['Pepperoni', 2, 63],
             ])
 
             // var data = new google.visualization.DataTable();
@@ -114,19 +114,22 @@
         function drawAnnotationChartTest() {
             let rowData = [];
             for (let i = 0; i < 100; i++) {
-                rowData.push([getRandomDate(), Math.ceil(Math.random() * 100000)])
+                let amount = Math.ceil(Math.random() * 100000);
+                rowData.push([getRandomDate(), amount, Math.ceil(amount * Math.random())])
             }
             var data = new google.visualization.DataTable();
             data.addColumn('date', 'Date');
             data.addColumn('number', 'amount');
+            data.addColumn('number', 'sales')
             data.addRows(rowData);
-
+            
             var chart = new google.visualization.AnnotationChart(document.getElementById('annotation_test_chart'));
-
             var options = {
-                width: '100%',
-                tooltip: { trigger: 'focus' },
-                focusTarget: 'category',
+                width: 1400,
+                displayZoomButtons: false,  // hide buttom at the top left
+                // fill: 60,                   // fill below area,
+                zoomStartTime: new Date(1586450000000),
+                zoomEndTime: new Date(1586470000000),
                 ui: {
                     minRangeSize: 500
                 },
@@ -186,7 +189,6 @@
             // Wait for the chart to finish drawing before calling the getImageURI() method.
             google.visualization.events.addListener(chart, 'ready', function () {
                 chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
-                console.log(chart_div.innerHTML);
             });
 
             chart.draw(data, options);
