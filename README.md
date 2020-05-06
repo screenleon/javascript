@@ -7,4 +7,5 @@
 * [Heap Sort](https://github.com/screenleon/javascript/blob/master/algorithm/Heap_Sort.js)
 
 ## leetCode
-* [Two Sum](https://github.com/screenleon/javascript/blob/master/algorithm/Hash_Table_for_Two_Sum.js)
+* [Two Sum](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Hash_Table_for_Two_Sum.js)
+* [Three Sum](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Three_Sum.js)
