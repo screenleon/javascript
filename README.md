@@ -9,3 +9,4 @@
 ## leetCode
 * [Two Sum](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Hash_Table_for_Two_Sum.js)
 * [Three Sum](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Three_Sum.js)
+* [String to Integer(atoi)](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Strubg_to_Integer(atoi).js)
