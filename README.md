@@ -12,3 +12,4 @@
 * [Three Sum](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Three_Sum.js)
 * [String to Integer(atoi)](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Strubg_to_Integer(atoi).js)
 * [First Bad Version](https://github.com/screenleon/javascript/blob/master/CodeForLearn/First_Bad_Version.js)
+* [Jewels and Stone](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Jewels_and_Stone.js)
