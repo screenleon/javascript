@@ -18,6 +18,7 @@
 * [First Bad Version](https://github.com/screenleon/javascript/blob/master/CodeForLearn/First_Bad_Version.js)
 * [Jewels and Stone](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Jewels_and_Stone.js)
 * [Ransom Note](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Ransom_Note.js)
+* [Reverse Integer](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Reverse_Integer.js)
 
 ---
 ## codewar
