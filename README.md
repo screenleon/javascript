@@ -2,6 +2,7 @@
 - [Algorithm](#Algorithm)
 - [leetCode](#leetCode)
 - [codewar](#codewar)
+- [HackerRank](#hackerRank)
 
 > the place to record what I learn
 
@@ -26,3 +27,8 @@
 * [Roman Numerals Helper](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Roman_Numerals_Helper.js)
 
 ---
+## HackerRank
+* [Day of the Programmer](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Day_of_the_Programmer.js)
+
+---
+> Copyright 2020 Lien Chen
