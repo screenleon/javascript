@@ -74,7 +74,5 @@ const handleFile = function (fileName) {
             console.log('Extracted certificate for: ' + name + (typeof sans !== 'undefined' ? ', ' + sans.join(', ') : ''))
         }
     }
-
-
 }
 handleFile(readDirectory + `/${readFileName}`)

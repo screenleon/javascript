@@ -23,6 +23,7 @@
 * [Longest Substring Without Repeating Characters](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Longest_Substring_Without_Repeating_Characters.js)
 * [Number Complement](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Number_Complement.js)
 * [First Unique Character in a String](https://github.com/screenleon/javascript/blob/master/CodeForLearn/First_Unique_Character_in_a_String.js)
+* [Majority Element](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Majority_Element.js)
 
 ---
 ## codewar
