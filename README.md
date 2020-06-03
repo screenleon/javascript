@@ -24,6 +24,7 @@
 * [Number Complement](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Number_Complement.js)
 * [First Unique Character in a String](https://github.com/screenleon/javascript/blob/master/CodeForLearn/First_Unique_Character_in_a_String.js)
 * [Majority Element](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Majority_Element.js)
+* [Cousins in Binary Tree](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Cousins_in_Binary_Tree.js)
 
 ---
 ## codewar
