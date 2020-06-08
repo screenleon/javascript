@@ -29,6 +29,8 @@
 * [Hamming distance](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Leetcode/Hamming_distance.js)
 * [Network Delay Time](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Leetcode/Network_Delay_Time.js)
 * [Student Attendance Record I](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Leetcode/Student_Attendance_Record_I.js)
+* [Long Pressed Name](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Leetcode/Long_Pressed_Name.js)
+* [Height Checker](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Leetcode/Height_Checker.js)
 
 ---
 ## codewar
