@@ -45,5 +45,7 @@
 * [Day of the Programmer](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Day_of_the_Programmer.js)
 * [The Hurdle Race](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/The_Hurdle_Race.js)
 * [Designer PDF Viewer](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Designer_PDF_Viewer.js)
+* [Counting Valleys](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Counting_Valleys.js)
+* [Jumping on the Clouds](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Jumping_on_the_Clouds.js)
 
 ---
