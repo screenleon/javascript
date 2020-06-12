@@ -2,6 +2,7 @@ const replaceSpace = (s) => {
     return s.replace(/[ ]/g, "_");
 }
 
-const word = 'Cousins in Binary Tree'
+let argv = process.argv[2];
+const word = argv || 'Encrypt this!';
 console.log(word);
 console.log(replaceSpace(word))
