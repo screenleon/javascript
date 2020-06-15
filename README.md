@@ -47,5 +47,7 @@
 * [Designer PDF Viewer](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Designer_PDF_Viewer.js)
 * [Counting Valleys](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Counting_Valleys.js)
 * [Jumping on the Clouds](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Jumping_on_the_Clouds.js)
+* [Bon Appétit](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Bon_Appétit.js)
+* [Drawing Book](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Drawing_Book.js)
 
 ---
