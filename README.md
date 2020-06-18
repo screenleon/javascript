@@ -49,5 +49,6 @@
 * [Jumping on the Clouds](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Jumping_on_the_Clouds.js)
 * [Bon Appétit](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Bon_Appétit.js)
 * [Drawing Book](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Drawing_Book.js)
+* [Equalize the Array](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Equalize_the_Array.js)
 
 ---
