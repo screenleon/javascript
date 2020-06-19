@@ -52,5 +52,6 @@
 * [Bon Appétit](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Bon_Appétit.js)
 * [Drawing Book](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Drawing_Book.js)
 * [Equalize the Array](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Equalize_the_Array.js)
+* [ACM ICPC Team](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/ACM_ICPC_Team.js)
 
 ---
