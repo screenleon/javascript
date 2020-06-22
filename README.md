@@ -55,5 +55,6 @@
 * [ACM ICPC Team](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/ACM_ICPC_Team.js)
 * [Taum and B'day](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Taum_and_B'day.js)
 * [2D Array - DS](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/2D_Array_-_DS.js)
+* [Dynamic Array](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Dynamic_Array.js)
 
 ---
