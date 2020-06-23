@@ -56,5 +56,6 @@
 * [Taum and B'day](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Taum_and_B'day.js)
 * [2D Array - DS](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/2D_Array_-_DS.js)
 * [Dynamic Array](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Dynamic_Array.js)
+* [Electronics Shop](https://github.com/screenleon/javascript/blob/master/CodeForLearn/HackerRank/Electronics_Shop.js)
 
 ---

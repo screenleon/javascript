@@ -53,6 +53,11 @@ function pageCountReference(n, p) {
     return from_front < from_back ? from_front : from_back;
 }
 
+function pageCount(n, p) {
+    if (n % 2 === 0) n += 1;
+    return Math.min(Math.floor(p / 2), Math.floor((n - p) / 2));
+}
+
 // console.log(pageCount(5, 4));
 // console.log(pageCount(6, 2));
 
