@@ -39,7 +39,7 @@
 * [Welcome!](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Codewar/Welcome.js)
 * [True for Just One?](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Codewar/True_for_Just_One.js)
 * [Encrypt this!](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Codewar/Encrypt_this.js)
-* [Beginner Series #2 Clock](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Codewar/Beginner_Series_#2_Clock.js)
+* [Beginner Series #2 Clock](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Codewar/Beginner_Series_%232_Clock.js)
 * [Halving Sum](https://github.com/screenleon/javascript/blob/master/CodeForLearn/Codewar/Halving_Sum.js)
 
 ---
