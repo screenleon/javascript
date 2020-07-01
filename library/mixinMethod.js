@@ -1,17 +1,17 @@
-let bird = {
+let test1 = {
 };
 
-let plane = {
+let test2 = {
 };
 
-let flyMixin = function (obj) {
-    obj.fly = function () {
-        console.log("Flying, wooosh!");
+let mixin = function (obj) {
+    obj.example = function () {
+        console.log("test to check example function");
     }
 };
 
-flyMixin(bird);
-flyMixin(plane);
+mixin(test1);
+mixin(test2);
 
-bird.fly(); // prints "Flying, wooosh!"
-plane.fly(); // prints "Flying, wooosh!"
+test1.example(); // print test to check example function
+test2.example(); // print test to check example function
