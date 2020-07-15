@@ -9,6 +9,13 @@ Object.prototype.isEqual = function (compareObject) {
     return true;
 }
 
+function compare(obj, compareObject) {
+    if (Object.keys(obj).length !== Object.keys(compareObject).length) return false;
+    for (let objkey in obj)
+        if (obj[objkey] !== compareObject[objkey]) return false;
+    return true;
+}
+
 // const test1 = { one: 1, two: 2 };
 // const test2 = { one: 1, two: 2 };
 // const test3 = { one: 1, two: 3 };
